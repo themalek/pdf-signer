@@ -10,8 +10,9 @@ from pathlib import Path
 pagesInPdf = 3
 pdfsAmount = 10
 currentDateString = datetime.datetime.now().strftime('%Y%m%d')
-initialPdfFilePath = f"{str(Path.home())}/development/pdf_script/files/{currentDateString}/{currentDateString}.pdf"
-signedPdfsSavePath = f"{str(Path.home())}/development/pdf_script/files/{currentDateString}"
+signedPdfsSavePath = os.path.join(Path.home(), "development", "pdf_script", "files", currentDateString)
+initialPdfFilePath = os.path.join(Path.home(), "development", "pdf_script", "files", currentDateString, f"{currentDateString}.pdf")
+
 
 
 def start():
